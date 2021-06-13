@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+5.times do
+  Category.create(
+    name: Faker::Book.unique.genre
+  )
+end
+
+8.times do
+  Book.create(
+   title: Faker::Book.unique.title,
+   description: Faker::Lorem.paragraph,
+   category_id: rand(1..5)
+  )
+end
