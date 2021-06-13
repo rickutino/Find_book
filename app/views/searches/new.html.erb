@@ -1,0 +1,11 @@
+<h1>検索</h1>
+
+<%= form_with model: @search do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.collection_select(:category_id, @category, :id, :name, {prompt: "カテゴリーを選択してください"}) %>
+
+    <%= f.submit "Search" %>
+<% end %>
+
+<p><%= link_to "Back", '/book' %></p> 

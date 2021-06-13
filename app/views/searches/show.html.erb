@@ -1,0 +1,26 @@
+<h1>Search Results</h1>
+<p><%= link_to "Back", new_search_path %></p>
+
+<% if @search.search_book.empty? %>
+    <p>検索した本はありません。</p>
+<% else %>
+    <table>
+        <thead>
+            <tr>
+                <th>タイトル</th>
+                <th>カテゴリー</th>
+                <th colspan="1"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @search.search_book.each do |book| %>
+            <tr>
+                <td><%= book.title %></td>
+                <td><%= book.category.name %></td>
+                <td><%= link_to 'Show', book %></td>
+            </tr>
+            <% end %>
+        </tbody>
+</table>
+<% end %>
