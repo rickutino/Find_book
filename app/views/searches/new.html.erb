@@ -5,7 +5,6 @@
         <li>
           <%= link_to "", new_book_path, class: "fa fa-plus-circle fa-2x", aria: { hidden: "true" } %>
         </li>
-        <p></p>
         <li>
           <%= link_to "", books_path, class: "fa fa-book fa-2x", aria: { hidden: "true" }%>
         </li>
@@ -17,12 +16,14 @@
   </nav>
     
   <main>  
-    <h1>ブック検索</h1>
-
     <%= form_with model: @search do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title, class: "form-control ds-input" %>
-      <%= f.collection_radio_buttons(:category_id, @categories, :id, :name, {prompt: "カテゴリーを選択してください"}) %>
+      <div class="search-form">
+        <h2>ブック検索</h2>
+        <%= f.text_field :title, class: "title-input"%>
+      </div>
+      <div class="form-radio-input">
+        <%= f.collection_radio_buttons(:category_id, @categories, :id, :name, {prompt: "カテゴリーを選択してください"}, class: "radio-input") %>
+      </div>
 
       <%= f.submit "Search", class:"button" %>
     <% end %>

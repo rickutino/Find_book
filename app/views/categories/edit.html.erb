@@ -1,0 +1,8 @@
+<h1>カテゴリー</h1>
+<%= form_with model: @category do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "編集" %>
+<% end %>
+
+<%= link_to "戻る", :back %>
