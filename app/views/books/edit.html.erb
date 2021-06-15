@@ -1,4 +1,4 @@
-<h1>Book#edit</h1>
+<h1>ブック</h1>
 <%= form_with model: @book do |f| %>
   <%= f.text_field :title %>
   <%= f.collection_select(:category_id, @categories, :id, :name) %>
@@ -6,3 +6,5 @@
 
   <%= f.submit "登録" %>
 <% end %>
+
+<%= link_to "戻る", :back %>

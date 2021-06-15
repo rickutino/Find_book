@@ -13,13 +13,19 @@ body{
 }
 
 body, input, button, textarea {
-  font: 600 18px Nunito, sans-serif;
+  font: 600 20px Nunito, sans-serif;
 }
 
 .button{
-  width: 80px;
-  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 32px auto;
 
+  width: 300px;
+  height: 56px;
+  color: #ffffff;
   border: 0;
 
   background-color: #da940e;
@@ -27,13 +33,11 @@ body, input, button, textarea {
 
   cursor: pointer;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   transition: background-color 0.2s;
 }
 
 .button:hover {
+  color: #5f5a5a;
   background-color: #f3b846;
 }

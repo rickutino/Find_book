@@ -1,3 +1,98 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container{
+  display: flex;
+  height: 100vh;
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .search-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 700px;
+      background: #ffffff;
+
+      margin: 48px auto 32px;
+      padding: 64px 80px;
+
+      border: 1px solid #e5e1d3;
+      border-radius: 20px;
+
+      overflow: hidden;
+      .title-input{
+        display: flex;
+
+        width: 80%;
+        font-size: 30px;
+        height: 50px;
+        margin-top: 40px;
+
+        color: #3a300d;
+        background: #F5F8FA;
+        border: 1px solid #D3E2E5;
+        outline: none;
+      }
+    }
+    .form-radio-input{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      width: 700px;
+      background: #ffffff;
+      padding: 32px 80px;
+      margin: 0 auto;
+
+      border: 1px solid #e5e1d3;
+      border-radius: 20px;
+
+      overflow: hidden;
+      input{
+        width: 50%;
+        margin-top: 15px;
+      }
+      label{
+        width: 50%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .navbar {
+    width: 80px;
+    height: 100%;
+    background: #f6f6f6;
+    ul{
+      text-align: center;
+      > li:first-child{
+        padding: 30px 0 25px 0;
+        .fa-plus-circle {
+          color: #3d72d6;
+        }
+      }
+      li{
+        padding: 25px 0 15px 0;
+        .fa{
+          color: #3a300d;
+        }
+      }
+    }
+  }
+}
+
+
+
+li {
+  list-style-type: none;
+}
+
+a:link {
+  text-decoration: none;
+}
