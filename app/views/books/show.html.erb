@@ -1,0 +1,14 @@
+<div>
+  <h3>タイトル</h3>
+  <p><%= @book.title %></p>
+</div>
+<div>
+  <h3>カテゴリー</h3>
+  <p><%= @book.category.name %></p>
+</div>
+<div>
+  <h3>詳細</h3>
+  <p><%= @book.description %></p>
+</div>
+
+<%= link_to "戻る", :back %>
