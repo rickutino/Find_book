@@ -5,7 +5,7 @@ class SearchesController < ApplicationController
 
   def new 
     @search = Search.new
-    @category = Category.all
+    @categories = Category.all
     @category_id = Book.distinct.pluck(:category_id)
   end
 

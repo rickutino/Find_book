@@ -1,11 +1,30 @@
-<h1>検索</h1>
+<div class="container">
+  <nav class="navbar">
+    <div>
+      <ul>
+        <li>
+          <%= link_to "", new_book_path, class: "fa fa-plus-circle fa-2x", aria: { hidden: "true" } %>
+        </li>
+        <p></p>
+        <li>
+          <%= link_to "", books_path, class: "fa fa-book fa-2x", aria: { hidden: "true" }%>
+        </li>
+        <li>
+          <%= link_to "", "#", class: "fa fa-list fa-2x", aria: { hidden: "true" }%>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    
+  <main>  
+    <h1>ブック検索</h1>
 
-<%= form_with model: @search do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.collection_select(:category_id, @category, :id, :name, {prompt: "カテゴリーを選択してください"}) %>
+    <%= form_with model: @search do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control ds-input" %>
+      <%= f.collection_radio_buttons(:category_id, @categories, :id, :name, {prompt: "カテゴリーを選択してください"}) %>
 
-    <%= f.submit "Search" %>
-<% end %>
-
-<p><%= link_to "Back", '/book' %></p> 
+      <%= f.submit "Search", class:"button" %>
+    <% end %>
+  </main>
+</div>
