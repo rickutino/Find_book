@@ -41,3 +41,50 @@ body, input, button, textarea {
   color: #5f5a5a;
   background-color: #f3b846;
 }
+
+.form_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 32px auto;
+  width: 300px;
+  height: 56px;
+  color: #5f5a5a;
+  border: 1px solid #5f5a5a;
+  background-color: transparent;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+  &:hover {
+    border: 0;
+    color: #ffffff;
+    background-color: #a1bdf1;
+  }
+}
+
+
+.global_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 32px auto;
+  width: 300px;
+  height: 56px;
+  color: #5f5a5a;
+  border: 1px solid #5f5a5a;
+  background-color: transparent;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+  &:hover {
+    border: 0;
+    color: #ffffff;
+    background-color: #a1bdf1;
+  }
+}

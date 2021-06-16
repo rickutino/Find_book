@@ -1,8 +1,11 @@
-<h1>カテゴリー</h1>
-<%= form_with model: @category do |f| %>
-  <%= f.text_field :name %>
+<div class="search-form">
+  <h2>カテゴリー</h2>
 
-  <%= f.submit "編集" %>
+  <%= form_with model: @category do |f| %>
+  <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。",class: "title-input"  %>
+</div>
+
+  <%= f.submit "変更", class: "button" %>
 <% end %>
 
-<%= link_to "戻る", :back %>
+<%= link_to "戻る", :back, class: 'global_button' %>

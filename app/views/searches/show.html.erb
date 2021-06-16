@@ -1,9 +1,10 @@
-<h1>Search Results</h1>
-
-<% if @search == nil ||
-  @search.search_book.empty? %>
-  <p>検索した本はありません。</p>
-<% else %>
+<div class="search-form">
+  <h2>検索結果</h2>
+  
+  <% if @search == nil ||
+    @search.search_book.empty? %>
+    <p class="search-empty">検索した本はありません。</p>
+  <% else %>
   <table>
     <thead>
       <tr>
@@ -18,7 +19,7 @@
         <tr>
           <td><%= book.title %></td>
           <td><%= book.category.name %></td>
-          <td><%= link_to 'Show', book %></td>
+          <td><%= link_to 'Show', book, class: 'form_button' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -26,4 +27,4 @@
 <% end %>
 
 
-<p><%= link_to "ホームページへ", new_search_path %></p>
+<p><%= link_to "ホームページへ", new_search_path, class: 'button' %></p>

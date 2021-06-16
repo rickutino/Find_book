@@ -14,9 +14,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(book_params)
-
-    redirect_to new_search_path
+    @book = Book.create(book_params)
+    if @book.save
+      redirect_to new_search_path
+    else 
+      render　:new
+    end
   end 
 
   def edit
@@ -26,9 +29,11 @@ class BooksController < ApplicationController
 
   def update
     # @book = Book.find(params[:id])
-    @book.update(book_params)
-
-    redirect_to book_path(@book)
+     if @book.update(book_params)
+      redirect_to book_path(@book), notice: "ブックの編集成功しました。"
+    else 
+      render　:edit
+    end
   end
 
   def destroy
@@ -46,5 +51,8 @@ class BooksController < ApplicationController
 
   def current_book
     @book = Book.find(params[:id])
+    unless @book
+      redirect_to new_search_path, notice: "探しているブックがありません。"
+    end
   end
 end

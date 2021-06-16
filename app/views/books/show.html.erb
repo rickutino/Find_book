@@ -1,14 +1,16 @@
-<div>
-  <h3>タイトル</h3>
-  <p><%= @book.title %></p>
-</div>
-<div>
-  <h3>カテゴリー</h3>
-  <p><%= @book.category.name %></p>
-</div>
-<div>
-  <h3>詳細</h3>
-  <p><%= @book.description %></p>
+<div class="books_form">
+  <div class="show_books">
+    <h3>タイトル</h3>
+    <p><%= @book.title %></p>
+  </div>
+  <div class="show_books">
+    <h3>カテゴリー</h3>
+    <p><%= @book.category.name %></p>
+  </div>
+  <div class="show_books">
+    <h3>詳細</h3>
+    <p><%= @book.description %></p>
+  </div>
 </div>
 
-<%= link_to "ホームページへ", new_search_path %>
+<%= link_to "ホームページへ", new_search_path, class: 'button' %>

@@ -1,8 +1,10 @@
-<h1>新しい本の登録</h1>
-<%= form_with model: @category do |f| %>
-  <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。" %>
+<div class="search-form">
+  <h2>新しい本の登録</h2>
+  <%= form_with model: @category do |f| %>
+  <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。",class: "title-input"  %>
+</div>
 
-  <%= f.submit "登録" %>
+  <%= f.submit "登録", class: "button" %>
 <% end %>
 
-<%= link_to "戻る", :back %>
+<%= link_to "戻る", :back, class: 'form_button' %>

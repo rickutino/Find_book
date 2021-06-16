@@ -1,3 +1,87 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.search-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 700px;
+  background: #ffffff;
+
+  margin: 48px auto 40px;
+  padding: 64px 80px;
+
+  border: 1px solid #e5e1d3;
+  border-radius: 20px;
+
+  overflow: hidden;
+  .search-lists{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    margin-top: 24px;
+    .search-lists-button{
+      display: flex;
+      .form_button{
+        width: 80px;
+        height: 32px;
+        color: #5f5a5a;
+        border: 1px solid #5f5a5a;
+        background-color: transparent;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        transition: background-color 0.2s;
+        margin: 0 0 0 16px;
+        &.delete{
+          color: white;
+          border-color: white;
+          background-color: #f35a5a;
+        }
+        &.delete:hover{
+          color: white;
+          border-color: white;
+          background-color: #f92323;
+        }
+      }
+
+      .form_button:hover {
+        border: 0;
+        color: #ffffff;
+        background-color: #a1bdf1;
+      }
+    }
+  }
+  form{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    margin-top: 40px;
+    .title-input{
+      display: flex;
+  
+      padding: .8rem 1em;
+      width: 450px;
+      font-size: 20px;
+      height: 50px;
+  
+      color: #3a300d;
+      background: #F5F8FA;
+      border: 1px solid #D3E2E5;
+      outline: none;
+    }
+  }
+  .icon-plus{
+    position: absolute;
+    color: #3d72d6;
+    right: 11.5%;
+    top: 10.3%;
+  }
+}

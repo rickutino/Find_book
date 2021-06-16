@@ -1,11 +1,14 @@
-<h1>カテゴリー一覧</h1>
- <%= link_to "", new_category_path, class: "fa fa-plus-circle fa-2x", aria: { hidden: "true" } %>
-<table>
+<div class="search-form">
+  <h2>カテゴリー一覧</h2>
+  <%= link_to "", new_category_path, class: "fa fa-plus-circle fa-2x icon-plus", aria: { hidden: "true" } %>
   <% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= link_to '編集', edit_category_path(category), method: 'get'%></td>
-    <td><%= link_to '削除', category_path(category), method: :delete, data: { confirm: '削除してもよろしいですか?' } %></td>
+    <div class="search-lists">
+      <%= category.name %>
+      <div class="search-lists-button">
+        <%= link_to '編集', edit_category_path(category), method: 'get', class: "form_button"%>
+        <%= link_to '削除', category_path(category), method: :delete, data: { confirm: '削除してもよろしいですか?' }, class: "form_button delete" %>
+      </div>
+    </div>
   <% end %>
-</table>
-<%= link_to "ホームページへ", new_search_path %>
+</div>
+<%= link_to "ホームページへ", new_search_path, class: 'button' %>

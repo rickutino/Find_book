@@ -2,3 +2,129 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.books_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 700px;
+  background: #ffffff;
+
+  margin: 48px auto 40px;
+  padding: 64px 80px;
+
+  border: 1px solid #e5e1d3;
+  border-radius: 20px;
+
+  overflow: hidden;
+  .books_lists{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    margin-top: 24px;
+    .books_lists_button{
+      display: flex;
+      .form_button{
+        width: 80px;
+        height: 32px;
+        color: #5f5a5a;
+        border: 1px solid #5f5a5a;
+        background-color: transparent;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        transition: background-color 0.2s;
+        margin: 0 0 0 16px;
+        &.delete{
+          color: white;
+          border-color: white;
+          background-color: #f35a5a;
+        }
+        &.delete:hover{
+          color: white;
+          border-color: white;
+          background-color: #f92323;
+        }
+        &:hover {
+          border: 0;
+          color: #ffffff;
+          background-color: #a1bdf1;
+        }
+      }
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+
+    .selectbox {
+      width:90%;
+      margin:1em auto;
+      position:relative;
+    }
+    select{
+      -webkit-appearance:none;
+      margin-top: 40px;
+      appearance:none;
+      height: 50px;
+      width:100%;
+      padding: .8rem 1em;
+      box-sizing:border-box;
+      font-size:1em;
+      border:#ccc 1px solid;
+      border-radius:0;
+      background:#F5F8FA;
+    }
+    .selectbox::after{
+      content:"";
+      display:block;
+      width:10px;
+      height:10px;
+      position:absolute;
+      right:5%;
+      top:35%;
+      border-bottom:#333 2px solid;
+      border-right:#333 2px solid;
+      transform:rotate(45deg)translateY(-30%);
+    }
+    .title-input{
+      display: flex;
+      
+      padding: .8rem 1em;
+      margin-top: 40px;
+      width: 450px;
+      font-size: 20px;
+      height: 50px;
+      
+      color: #3a300d;
+      background: #F5F8FA;
+      border: 1px solid #D3E2E5;
+      outline: none;
+    }
+    .title-input:last-child{
+      height: 130px;
+    }
+  }
+}
+
+.show_books{
+  display: flex;
+  justify-content: flex-start;;
+  align-items: center;
+
+  width: 90%;
+  padding: 1rem 1rem;
+  h3{
+    width: 150px;
+    margin-right: 16px;
+  }
+  p{
+    flex: 1;
+  }
+}

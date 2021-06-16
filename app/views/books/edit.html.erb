@@ -1,10 +1,11 @@
-<h1>ブック</h1>
-<%= form_with model: @book do |f| %>
-  <%= f.text_field :title %>
-  <%= f.collection_select(:category_id, @categories, :id, :name) %>
-  <%= f.text_area :description, size: "20x10"%>
+<div class="books_form">
+  <h1>ブック</h1>
+  <%= form_with model: @book do |f| %>
+    <%= f.text_field :title, class: "title-input"  %>
+    <%= f.collection_select(:category_id, @categories, :id, :name, {class: "title-input"}) %>
+    <%= f.text_area :description, size: "20x10",class: "title-input" %>
+</div>
+    <%= f.submit "編集", class: 'button' %>
+  <% end %>
 
-  <%= f.submit "登録" %>
-<% end %>
-
-<%= link_to "戻る", :back %>
+<%= link_to "戻る", :back, class: 'global_button' %>
