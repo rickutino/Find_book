@@ -1,9 +1,9 @@
-<div class="search-form">
-  <h2>カテゴリー</h2>
+<%= form_with model: @category, local: true do |f| %>
+  <div class="search-form">
+    <h2>カテゴリー</h2>
 
-  <%= form_with model: @category do |f| %>
-  <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。",class: "title-input"  %>
-</div>
+    <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。",class: "title-input"  %>
+  </div>
 
   <%= f.submit "変更", class: "button" %>
 <% end %>
