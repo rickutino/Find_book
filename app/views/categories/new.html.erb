@@ -1,5 +1,5 @@
 <%= form_with model: @category, local: true do |f| %>
-  <div class="search-form">
+  <div class="category-form">
     <h2>新しい本の登録</h2>
     <%= f.text_field :name, placeholder: "カテゴリー名を入力してください。",class: "title-input"  %>
   </div>
@@ -7,4 +7,4 @@
   <%= f.submit "登録", class: "button" %>
 <% end %>
 
-<%= link_to "戻る", :back, class: 'global_button' %>
+<%= link_to "戻る", :back, class: 'back_button' %>

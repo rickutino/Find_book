@@ -16,7 +16,7 @@
   </nav>
     
   <main>  
-    <%= form_with model: @search do |f| %>
+    <%= form_with model: @search, local: true  do |f| %>
       <div class="search-form">
         <h2>ブック検索</h2>
         <%= f.text_field :title, class: "title-input"%>

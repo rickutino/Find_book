@@ -1,10 +1,10 @@
-<div class="search-form">
+<div class="category-form">
   <h2 class="title-list">カテゴリー一覧</h2>
   <%= link_to "", new_category_path, class: "fa fa-plus-circle fa-2x icon-plus", aria: { hidden: "true" } %>
   <% @categories.each do |category| %>
-    <div class="search-lists">
+    <div class="category-lists">
       <%= category.name %>
-      <div class="search-lists-button">
+      <div class="category-lists-button">
         <%= link_to '編集', edit_category_path(category), method: 'get', class: "form_button"%>
         <%= link_to '削除', category_path(category), method: :delete, data: { confirm: '削除してもよろしいですか?' }, class: "form_button delete" %>
       </div>

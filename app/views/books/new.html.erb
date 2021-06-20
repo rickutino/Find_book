@@ -1,12 +1,12 @@
-<div class="books_form">
-  <h1>新しい本の登録</h1>
-  <%= form_with model: @book do |f| %>
-    <%= f.text_field :title, placeholder: "タイトルを入力してください。", class: "title-input" %>
-    <%= f.collection_select(:category_id, @categories, :id, :name, {prompt: "カテゴリーを選択してください"}, {class: "title-input"}) %>
-    <%= f.text_area :description,size: "20x10", placeholder: "タイトルを入力してください。", class: "title-input" %>
-</div>
+<%= form_with model: @book, local: true  do |f| %>
+  <div class="books_form">
+    <h1>新しい本の登録</h1>
+      <%= f.text_field :title, placeholder: "タイトルを入力してください。", class: "title-input" %>
+      <%= f.collection_select(:category_id, @categories, :id, :name, {prompt: "カテゴリーを選択してください"}, {class: "title-input"}) %>
+      <%= f.text_area :description,size: "20x10", placeholder: "概要を入力してください。", class: "title-input text-area" %>
+  </div>
 
     <%= f.submit "登録", class: 'button'  %>
   <% end %>
 
-<%= link_to "戻る", :back, class: 'global_button' %>
+<%= link_to "戻る", :back, class: 'back_button' %>

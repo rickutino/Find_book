@@ -1,7 +1,7 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.search-form{
+.category-form{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,79 +9,64 @@
   position: relative;
 
   width: 700px;
-  background: #ffffff;
+  background: var(--white);
 
-  margin: 48px auto 40px;
-  padding: 64px 80px;
+  margin: 3rem auto 2.5rem;
+  padding: 4rem 5rem;
 
-  border: 1px solid #e5e1d3;
-  border-radius: 20px;
+  border: 1px solid var(--input-border);
+  border-radius: 1.25rem;
 
   overflow: hidden;
-  .search-lists{
+  .category-lists{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
     width: 100%;
-    margin-top: 24px;
-    .search-lists-button{
+    margin-top: 1.5rem;
+    .category-lists-button{
       display: flex;
       .form_button{
-        width: 80px;
-        height: 32px;
-        color: #5f5a5a;
-        border: 1px solid #5f5a5a;
-        background-color: transparent;
-        border-radius: 4px;
-
-        cursor: pointer;
-
-        transition: background-color 0.2s;
-        margin: 0 0 0 16px;
         &.delete{
-          color: white;
-          border-color: white;
-          background-color: #f35a5a;
+          color: var(--white);
+          border-color: var(--white);
+          background-color: var(--delete-color);
         }
         &.delete:hover{
-          color: white;
-          border-color: white;
-          background-color: #f92323;
+          color: var(--white);
+          border-color: var(--white);
+          background-color: var(--delete-color-light);
         }
       }
-
-      .form_button:hover {
-        border: 0;
-        color: #ffffff;
-        background-color: #a1bdf1;
-      }
     }
+  }
+  .title-input{
+    display: flex;
+
+    margin-top: 1.8rem;
+    padding: .8rem 1em;
+    width: 450px;
+    font-size: 1.2rem;
+    height: 3.125rem;
+
+    color: var(--input-color);
+    background: var(--input-background);
+    border: 1px solid var(--input-border);
+    outline: none;
   }
   form{
     display: flex;
     justify-content: center; 
     align-items: center; 
-
-    margin-top: 40px;
-    .title-input{
-      display: flex;
-  
-      padding: .8rem 1em;
-      width: 450px;
-      font-size: 20px;
-      height: 50px;
-  
-      color: #3a300d;
-      background: #F5F8FA;
-      border: 1px solid #D3E2E5;
-      outline: none;
-    }
   }
   .icon-plus{
     position: absolute;
-    color: #3d72d6;
+    color: var(--secondary-color);
     right: 11.5%;
-    top: 10.3%;
+    top: 18.5%;
+  }
+  .title-list{
+    margin-bottom: 1.5rem;
   }
 }
