@@ -18,7 +18,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to new_search_path
     else 
-      render　:new
+      render :new
     end
   end 
 
